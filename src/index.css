@@ -14,19 +14,19 @@
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   --animate-gradient: gradient 8s ease infinite;
-}
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
 
-  50% {
-    background-position: 100% 50%;
-  }
+    50% {
+      background-position: 100% 50%;
+    }
 
-  100% {
-    background-position: 0% 50%;
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
 
@@ -46,39 +46,41 @@
   }
 }
 
-/* Custom utility classes */
-@layer utilities {
-  .glass {
-    @apply bg-white/80 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgba(0, 0, 0, 0.04)];
-  }
-
-  .glass-dark {
-    @apply bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-[0_8px_30px_rgba(0, 0, 0, 0.12)];
-  }
-
-  .premium-shadow {
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.04);
-  }
-
-  .premium-gradient {
-    @apply bg-gradient-to-br from-[#FF0080] via-[#7928CA] to-[#0070F3] bg-[length:200%_200%] animate-gradient;
-  }
-
-  .radiant-glass {
-    @apply bg-white/60 backdrop-blur-2xl border border-white/60 shadow-[0_8px_32px_rgba(31, 38, 135, 0.15)];
-  }
-
-  .premium-transition {
-    @apply transition-all duration-400 ease-[cubic-bezier(0.23, 1, 0.32, 1)];
-  }
+/* Custom utility classes (Tailwind v4 syntax) */
+@utility glass {
+  @apply bg-white/80 backdrop-blur-xl border border-white/40;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
 }
 
-/* Hide scrollbar for horizontal scroll areas */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+@utility glass-dark {
+  @apply bg-slate-900/80 backdrop-blur-xl border border-slate-700/50;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.no-scrollbar {
+@utility premium-shadow {
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.04);
+}
+
+@utility premium-gradient {
+  @apply bg-gradient-to-br from-[#FF0080] via-[#7928CA] to-[#0070F3] bg-[length:200%_200%] animate-gradient;
+}
+
+@utility radiant-glass {
+  @apply bg-white/60 backdrop-blur-2xl border border-white/60;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+@utility premium-transition {
+  @apply transition-all duration-400;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@utility no-scrollbar {
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
