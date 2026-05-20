@@ -49,11 +49,11 @@
 /* Custom utility classes */
 @layer utilities {
   .glass {
-    @apply bg-white/80 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgba(0,0,0,0.04)];
+    @apply bg-white/80 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgba(0, 0, 0, 0.04)];
   }
 
   .glass-dark {
-    @apply bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-[0_8px_30px_rgba(0,0,0,0.12)];
+    @apply bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-[0_8px_30px_rgba(0, 0, 0, 0.12)];
   }
 
   .premium-shadow {
@@ -65,11 +65,11 @@
   }
 
   .radiant-glass {
-    @apply bg-white/60 backdrop-blur-2xl border border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15)];
+    @apply bg-white/60 backdrop-blur-2xl border border-white/60 shadow-[0_8px_32px_rgba(31, 38, 135, 0.15)];
   }
 
   .premium-transition {
-    @apply transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)];
+    @apply transition-all duration-400 ease-[cubic-bezier(0.23, 1, 0.32, 1)];
   }
 }
 
